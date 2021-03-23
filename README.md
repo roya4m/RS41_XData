@@ -14,6 +14,12 @@ The script WriteXData.py is an example of a script that can be used to write XDa
 
 Once updated, this script will write files in the directory 'C:\data\'. 
 
+XDATA protocol
+---------------
+More information on the XDATA protocol can be found here: 
+* https://www.esrl.noaa.gov/gmd/ozwv/wvap/sw.html
+* https://www.esrl.noaa.gov/gmd/aftp/user/jordan/iMet-1-RSB%20Radiosonde%20XDATA%20Daisy%20Chaining.pdf
+
 
 Trouble shooting
 ---------
