@@ -20,11 +20,11 @@ import os
 
 #global variable
 global dirOut
-#dirOut = "C:\data\*"
+dirOut = "C:\data\*"
 
 ## pour test --> indiquer le dossier contenant les données 
 #(fichier XData et fichier RawData): 
-dirOut = "/home/roya/ktrm/BALLON_LIBRE/sonde_surfusion/2021_11_23/"
+#dirOut = "/home/roya/ktrm/BALLON_LIBRE/sonde_surfusion/2021_11_23/"
 
 
 ### conversion hexadecimale twc:
