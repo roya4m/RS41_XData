@@ -66,9 +66,9 @@ __Version__ = "2.4." + filter(str.isdigit, "$Revision: 28610 $")
 __MissingData__ = -32768.0
 __KelvinToC__ = 273.15
 __MissingValue__ = "////////"
-__ColumnSeparator__ = "\t"
-__Columns__ = ["    time","offset","InstrumentType", "InstrumentNumber","SrvTime","GpsOffset","XData"]
-__Units__ = ["    s","    s","/","/","    s","    s","Hz"]
+__ColumnSeparator__ = " "
+__Columns__ = ["time","offset","InstrumentType", "InstrumentNumber","SrvTime","GpsOffset","XData"]
+__Units__ = ["s","s","/","/","s","s","Hz"]
 
 OperatorIdValue = 'OBSERVER_NAME'
 CommentValue = 'FREE_TEXT'
@@ -258,10 +258,14 @@ class WriteXData(IExecutableScript):
     """
 
     columns = []
+    if (datasrvtime == __MissingData__) :
+        columns.append(__MissingValue__)
+    else :
+        columns.append("%s" % datasrvtime)
     if (rxTime == __MissingData__) :
         columns.append(__MissingValue__)
     else :
-       time = round(rxTime, 2) 
+       time = round(rxTime, 2)
        columns.append("%s" % time)
     if (measurementoffset == __MissingData__) :
         columns.append(__MissingValue__)
@@ -275,10 +279,6 @@ class WriteXData(IExecutableScript):
         columns.append(__MissingValue__)
     else :
         columns.append("%s" % instrumentnumber)
-    if (datasrvtime == __MissingData__) :
-        columns.append(__MissingValue__)
-    else :
-        columns.append("%s" % datasrvtime)
     if (gpstimeoffset == __MissingData__) :
         columns.append(__MissingValue__)
     else :
