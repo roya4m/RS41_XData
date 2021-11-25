@@ -23,8 +23,8 @@ More information on the XDATA protocol can be found here:
 
 Trouble shooting
 ---------
-Classical trouble shooting when uploading a script to the software:
-- to do
+See the Memo files
+
 
 Contacts
 ---------
